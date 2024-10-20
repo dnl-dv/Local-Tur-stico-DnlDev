@@ -1,3 +1,252 @@
+body {
+    /* Define o elemento como um contêiner flexível */
+    display: inline-flex; 
+
+    /* Define o espaçamento interno (topo, direita, baixo e esquerda)*/
+    padding: 88px 80px 48px 80px;
+
+    /* Define a direção dos itens flexíveis dentro do contêiner (column: organiza verticalmente) */
+    flex-direction: column;
+
+    /* Os itens no container serão empurrados para a parte inferior, deixando espaço acima deles. */
+    justify-content: flex-end;
+
+    /*  Isso faz com que todos os itens flexíveis dentro do container sejam centralizados na horizontal, tornando o layout mais equilibrado. */
+    align-items: center;
+
+    /* Adiciona um espaçamento de 65 pixels entre cada item flexível, tornando o layout mais organizado e evitando que os itens pareçam aglomerados. */
+    gap: 65px;
+}
+
+main {
+    /* Define o <main> como contêiner flexível permitindo que os elementos filhos dentro do <main> (como divs e os parágrafos) sejam organizados de forma flexível, o que significa que eles podem se alinhar e se dimensionar automaticamente de acordo com o espaço disponíel. */
+    display: flex;
+
+    /* O <main> terá uma largura fixa */
+    width: 1120px;
+
+    /* Define a direção na qual os itens flexível (os elementos filhos) são organizados dentro do contêiner e com "column", os itens dentro do <main> serão organizados verticalmente, um em cima do outro. */
+    flex-direction: column;
+
+    /* Alinha os itens dentro do contêiner flexível ao longo do eixo horizontal e com a propriedade "Flex-start", todos os itens dentro do <main> serão alinhados do início do contêiner, que nesse caso é à esquerda. */
+    align-items: flex-start;
+
+    /* Define o espaço entre os itens dentro do contêiner flexíel. */
+    gap: 40px;
+}
+
+.title-page {
+    /* Define a <div> como um contêiner flexível ajudando os elementos filhos como (p class="headline"> e o <h1> serem organizados de maneira flexível, facilitando o alinhamento e espaçamento entre eles. */
+    display: flex;
+
+    /* Define a altura da <div>. A altura da área contendo o título e o subtítulo será limitada a 79px, garantindo que ela ocupe esse espaço específico na tela. */
+    height: 79px;
+
+    /* Organiza os elementos filhos em coluna, ou seja, o subtítulo (<p>) aparecerá acima do título (<h1>), respeitando a ordem vertical. */
+    flex-direction: column;
+
+    /* Tanto o subtítulo e quanto o título começarão alinhados à esquerda da <div>, garantindo um layout uniforme. */
+    align-items: flex-start;
+
+    /* Espaçamento consistente entre o subtítulo e o título, ajudando na clareza e na organização do conteúdo. */
+    gap: 8px;
+
+    /* Faz com que essa <div> se estenda para ocupar toda a largura disponível no contêiner pai e assim garantindo que o título e o subtítulo se alinhem corretamente. */
+    align-self: stretch;
+}
+
+.headline {
+    /* Define a cor do texto. */
+    color: var(--text-headline, #E1624F);
+
+    /* O texto será exibido com a fonte escolhida. */
+    font-family: "Open Sans", sans-serif;
+
+    /* Tamanho do texto. */
+    font-size: 16px;
+
+    /* Controla o estilo da fonte, no caso escolhido tipo normal. */
+    font-style: normal;
+
+    /* Texto ficará em negrito. */
+    font-weight: 700;
+
+    /* Espaçamento entre linha padrão da fonte. */
+    line-height: normal;
+
+    /* Converte o texto para maiúsculas. */
+    text-transform: uppercase;
+}
+
+.Conheca-Busan {
+    /* O texto ocupará no maximo 275px de largura, e se o conteúdo for maior que isso, poderá quebrar para a proxima linha. */
+    /* width: 275px; */
+
+    /* Define a cor do texto. */
+    color: var(--text-primary, #1B1B1B);
+
+    /* Fonte do texto */
+    font-family: "Open Sans", sans-serif;
+
+    /* Tamanho do texto. */
+    font-size: 36px;
+
+    /* O texto será exibido sem itálico. */
+    font-style: normal;
+
+    /* O texto será exibido em negrito. */
+    font-weight: 700;
+
+    /* O espaçamento entre linhas segue o padráo da fonte. */
+    line-height: normal;
+}
+
+.description-image {
+    /* Os elementos dentro dessa <div> (por exemplo, uma imagem e um parágrafo) serão organizados e distribuídos de forma flexível. */
+    display: flex;
+
+    /* 4px de espaço acima e abaixo do contúdo. 0px de espaço nas laterais. Isso evita que o contúdo fique muito colodo nas bordas superior e inferior da <div>. */
+    padding: 4px 0px;
+
+    /* Os elementos detro do <div> serão exibidos um abaixo do outro como se fossem empilhados. */
+    flex-direction: column;
+
+    /* Todos os elementos (como uma imagem e um parágrafo) serão centralizados horizontalmente dentro da <div>. */
+    align-items: center;
+
+    /* Isso cria um espaço claro e consistente entre, por exemplo, a imagem e a descrição, deixando o layout mais organizados e fácil de ler. */
+    gap: 24px;
+
+    /* Permite que a <div> ocupe toda a largura disponíel no contêiner pai. Mesmo que outros elementos no contêiner pai tenham tamanhos diferentes, essa <div> vai se expandir horizontalmente para preencher todos o espaço possível. */
+    align-self: stretch;
+}
+
+.description-image img {
+    height: 660px;
+    align-self: stretch;
+    border-radius: 28px;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+
+.subtitle {
+    height: 37px;
+    align-self: stretch;
+    color: var(--text-secondary, #333);
+    text-align: center;
+
+    /* subtitle */
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.content-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 64px;
+    align-self: stretch;
+}
+
 .divisor {
+    width: 1120px;
+    height: 1px;
     background: var(--border-primary, #D9D9D9);
 }
+
+.title-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.headline {
+    color: var(--text-headline, #E1624F);
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: var(--text-primary, #1B1B1B);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.paragraph {
+    color: var(--text-secondary, #333);
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 48px;
+    align-self: stretch;
+}
+
+.card-travel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+}
+
+.card-travel img {
+    height: 350px;
+    align-self: stretch;
+    border-radius: 28px;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+
+.content-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    align-self: stretch;
+}
+
+.content-card h3 {
+    width: 1183.508px;
+    color: var(--text-primary, #1B1B1B);
+    font-family: "Open Sans", sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.content-card p {
+    align-self: stretch;
+    color: var(--text-secondary, #333);
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
